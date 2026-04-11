@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <defs>
+    <!-- Dark obsidian stone gradients -->
+    <radialGradient id="kbS_body" cx="38%" cy="30%" r="72%">
+      <stop offset="0%"  stop-color="#546E7A"/>
+      <stop offset="30%" stop-color="#37474F"/>
+      <stop offset="70%" stop-color="#1C2A30"/>
+      <stop offset="100%" stop-color="#090E10"/>
+    </radialGradient>
+    <radialGradient id="kbS_face" cx="38%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#455A64"/>
+      <stop offset="50%" stop-color="#263238"/>
+      <stop offset="100%" stop-color="#0D1B20"/>
+    </radialGradient>
+    <radialGradient id="kbS_silver" cx="30%" cy="25%" r="65%">
+      <stop offset="0%"  stop-color="#ECEFF1"/>
+      <stop offset="40%" stop-color="#90A4AE"/>
+      <stop offset="100%" stop-color="#37474F"/>
+    </radialGradient>
+    <linearGradient id="kbS_shadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="kbS_robe" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"  stop-color="#455A64"/>
+      <stop offset="40%" stop-color="#263238"/>
+      <stop offset="100%" stop-color="#0D1B20"/>
+    </linearGradient>
+    <filter id="kbS_depth">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="kbS_glow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feFlood flood-color="#B39DDB" flood-opacity="0.5" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="kbS_eyeglow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feFlood flood-color="#FF1744" flood-opacity="0.8" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- SHADOW -->
+  <ellipse cx="50" cy="117" rx="26" ry="5" fill="#000000" opacity="0.5"/>
+
+  <!-- BASE -->
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#kbS_body)" filter="url(#kbS_depth)"/>
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#kbS_shadow)"/>
+  <line x1="22" y1="113" x2="78" y2="113" stroke="#546E7A" stroke-width="0.5" opacity="0.6"/>
+  <rect x="24" y="99" width="52" height="10" rx="2" fill="url(#kbS_body)" filter="url(#kbS_depth)"/>
+
+  <!-- ROBE/BODY dark king -->
+  <path d="M30,99 Q26,85 28,70 Q30,58 34,50 Q38,43 50,41 Q62,43 66,50 Q70,58 72,70 Q74,85 70,99 Z"
+        fill="url(#kbS_robe)" filter="url(#kbS_depth)"/>
+  <path d="M30,99 Q26,85 28,70 Q30,58 34,50 Q38,43 50,41 Q62,43 66,50 Q70,58 72,70 Q74,85 70,99 Z"
+        fill="url(#kbS_shadow)"/>
+  <!-- Dark robe crease lines - sharper, more angular -->
+  <path d="M50,42 L48,75 L47,99" stroke="#546E7A" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <path d="M50,42 L52,75 L53,99" stroke="#546E7A" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <path d="M30,99 Q32,85 34,70 Q36,58 39,52" stroke="#37474F" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <path d="M70,99 Q68,85 66,70 Q64,58 61,52" stroke="#1C2A30" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+  <!-- Silver/dark belt -->
+  <path d="M34,72 Q50,68 66,72 Q68,76 66,79 Q50,75 34,79 Q32,76 34,72 Z" fill="url(#kbS_silver)"/>
+  <rect x="46" y="72" width="8" height="7" rx="1.5" fill="url(#kbS_silver)" stroke="#90A4AE" stroke-width="0.5"/>
+  <!-- skull buckle -->
+  <ellipse cx="50" cy="75" rx="3" ry="3" fill="#263238"/>
+  <circle cx="48.5" cy="74" r="0.8" fill="#FF1744" opacity="0.8"/>
+  <circle cx="51.5" cy="74" r="0.8" fill="#FF1744" opacity="0.8"/>
+  <path d="M48.5,76.5 Q50,77.5 51.5,76.5" stroke="#546E7A" stroke-width="0.6" fill="none"/>
+
+  <!-- LEFT ARM with blade/staff -->
+  <path d="M30,65 Q22,62 20,57 Q18,52 22,49 Q27,47 31,51 Q33,56 34,63 Z"
+        fill="url(#kbS_robe)" filter="url(#kbS_depth)"/>
+  <!-- Dark sword/blade -->
+  <rect x="8" y="28" width="3" height="28" rx="1" fill="url(#kbS_silver)" filter="url(#kbS_glow)"/>
+  <polygon points="9.5,28 7,22 12,22" fill="url(#kbS_silver)" filter="url(#kbS_glow)"/>
+  <!-- crossguard -->
+  <rect x="4.5" y="36" width="10" height="2.5" rx="1" fill="url(#kbS_silver)"/>
+
+  <!-- RIGHT ARM -->
+  <path d="M70,65 Q78,62 80,57 Q82,52 78,49 Q73,47 69,51 Q67,56 66,63 Z"
+        fill="url(#kbS_robe)" filter="url(#kbS_depth)"/>
+  <!-- Dark orb in right hand -->
+  <circle cx="81" cy="54" r="6" fill="url(#kbS_body)" filter="url(#kbS_depth)"/>
+  <circle cx="79" cy="52" r="2" fill="#B39DDB" opacity="0.5"/>
+  <!-- dark energy cracks on orb -->
+  <path d="M77,52 L82,56" stroke="#7E57C2" stroke-width="0.8" opacity="0.7"/>
+  <path d="M79,50 L84,54" stroke="#9C27B0" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- Dark cape -->
+  <path d="M34,50 Q27,56 25,68 Q23,80 25,93 Q27,97 31,99 Q34,97 34,87 Q33,72 37,58 Z"
+        fill="#1C2A30" opacity="0.8"/>
+  <path d="M66,50 Q73,56 75,68 Q77,80 75,93 Q73,97 69,99 Q66,97 66,87 Q67,72 63,58 Z"
+        fill="#0D1B20" opacity="0.7"/>
+
+  <!-- DARK ARMOR CHEST -->
+  <path d="M36,50 Q38,43 50,41 Q62,43 64,50 Q62,58 50,60 Q38,58 36,50 Z"
+        fill="url(#kbS_body)" filter="url(#kbS_depth)"/>
+  <path d="M36,50 Q38,43 50,41 Q62,43 64,50 Q62,58 50,60 Q38,58 36,50 Z" fill="url(#kbS_shadow)"/>
+  <!-- Armor plates -->
+  <path d="M40,46 L44,44 L50,43 L56,44 L60,46 L58,52 L50,54 L42,52 Z" fill="#37474F" opacity="0.7"/>
+  <path d="M44,45 L50,43.5 L56,45 L55,51 L50,52 L45,51 Z" stroke="#546E7A" stroke-width="0.5" fill="none"/>
+  <!-- Dark gem / dark energy core -->
+  <circle cx="50" cy="49" r="4" fill="#1A0028" filter="url(#kbS_glow)"/>
+  <circle cx="50" cy="49" r="2.5" fill="#7E57C2" opacity="0.8"/>
+  <circle cx="49" cy="48" r="1" fill="#EDE7F6" opacity="0.8"/>
+  <!-- Cracks of dark energy -->
+  <path d="M50,49 L47,53" stroke="#9C27B0" stroke-width="0.7" opacity="0.7"/>
+  <path d="M50,49 L53,53" stroke="#7E57C2" stroke-width="0.7" opacity="0.6"/>
+  <path d="M50,49 L50,45" stroke="#B39DDB" stroke-width="0.7" opacity="0.6"/>
+
+  <!-- NECK -->
+  <rect x="44" y="36" width="12" height="8" rx="3" fill="url(#kbS_body)" filter="url(#kbS_depth)"/>
+  <!-- Dark collar spikes -->
+  <path d="M40,38 Q50,34 60,38 Q58,41 50,43 Q42,41 40,38 Z" fill="#263238" opacity="0.9"/>
+  <polygon points="44,38 45,33 46,38" fill="url(#kbS_silver)" opacity="0.7"/>
+  <polygon points="49,38 50,32 51,38" fill="url(#kbS_silver)" opacity="0.7"/>
+  <polygon points="54,38 55,33 56,38" fill="url(#kbS_silver)" opacity="0.7"/>
+
+  <!-- HEAD - angular dark king face -->
+  <ellipse cx="50" cy="28" rx="13" ry="14" fill="url(#kbS_face)" filter="url(#kbS_depth)"/>
+  <ellipse cx="50" cy="28" rx="13" ry="14" fill="url(#kbS_shadow)"/>
+  <!-- Dark face shading -->
+  <ellipse cx="50" cy="30" rx="9" ry="10" fill="#263238" opacity="0.5"/>
+  <!-- GLOWING EYES  -->
+  <ellipse cx="45" cy="26" rx="2.8" ry="2.2" fill="#FF1744" filter="url(#kbS_eyeglow)"/>
+  <ellipse cx="55" cy="26" rx="2.8" ry="2.2" fill="#FF1744" filter="url(#kbS_eyeglow)"/>
+  <ellipse cx="45" cy="26" rx="1.5" ry="1.2" fill="#FF8F00"/>
+  <ellipse cx="55" cy="26" rx="1.5" ry="1.2" fill="#FF8F00"/>
+  <!-- Nose shadow -->
+  <path d="M49,29 Q50,32 51,29" stroke="#546E7A" stroke-width="0.7" fill="none" opacity="0.6"/>
+  <!-- Grim expression -->
+  <path d="M44,35 Q47,33 50,33.5 Q53,33 56,35" stroke="#546E7A" stroke-width="1" fill="none"/>
+  <!-- Beard shadow lines -->
+  <path d="M42,33 Q44,37 50,39 Q56,37 58,33" fill="#1C2A30" opacity="0.6"/>
+  <path d="M44,35 Q46,40 50,41 Q54,40 56,35" stroke="#37474F" stroke-width="0.5" fill="none"/>
+
+  <!-- HORNED CROWN (obsidian + silver) -->
+  <!-- Crown base band -->
+  <rect x="35" y="13" width="30" height="6" rx="2" fill="url(#kbS_body)" stroke="#90A4AE" stroke-width="0.6" filter="url(#kbS_depth)"/>
+  <line x1="37" y1="16" x2="63" y2="16" stroke="#546E7A" stroke-width="0.5" opacity="0.6"/>
+  <!-- Main horns (2 large) -->
+  <path d="M38,13 Q34,6 36,2 Q38,0 40,3 Q41,7 42,13" fill="url(#kbS_body)" stroke="#546E7A" stroke-width="0.7" filter="url(#kbS_depth)"/>
+  <path d="M62,13 Q66,6 64,2 Q62,0 60,3 Q59,7 58,13" fill="url(#kbS_body)" stroke="#546E7A" stroke-width="0.7" filter="url(#kbS_depth)"/>
+  <!-- Center spike -->
+  <path d="M47,13 Q50,4 53,13" fill="url(#kbS_silver)" stroke="#90A4AE" stroke-width="0.5" filter="url(#kbS_glow)"/>
+  <!-- Small side spikes -->
+  <polygon points="42,13 43,8 44,13" fill="url(#kbS_silver)" opacity="0.8"/>
+  <polygon points="56,13 57,8 58,13" fill="url(#kbS_silver)" opacity="0.8"/>
+  <!-- Crown gems - dark purple/red -->
+  <circle cx="38" cy="3"   r="1.8" fill="#9C27B0" filter="url(#kbS_glow)"/>
+  <circle cx="50" cy="4.5" r="2"   fill="#FF1744" filter="url(#kbS_eyeglow)"/>
+  <circle cx="62" cy="3"   r="1.8" fill="#9C27B0" filter="url(#kbS_glow)"/>
+  <circle cx="43" cy="8.5" r="1.2" fill="#7E57C2" opacity="0.9"/>
+  <circle cx="57" cy="8.5" r="1.2" fill="#7E57C2" opacity="0.9"/>
+  <!-- Band gems -->
+  <circle cx="42" cy="16" r="1.2" fill="#9C27B0" opacity="0.9"/>
+  <circle cx="50" cy="16" r="1.5" fill="#FF1744" opacity="0.9"/>
+  <circle cx="58" cy="16" r="1.2" fill="#9C27B0" opacity="0.9"/>
+</svg>

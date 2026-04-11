@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="rb_body" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#4A0A0A"/>
+      <stop offset="40%" stop-color="#2D0505"/>
+      <stop offset="80%" stop-color="#1A0202"/>
+      <stop offset="100%" stop-color="#0D0101"/>
+    </radialGradient>
+    <linearGradient id="rb_shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#CC2222" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#CC2222" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="rb_top" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#7A0000"/>
+      <stop offset="50%" stop-color="#4A0A0A"/>
+      <stop offset="100%" stop-color="#1A0202"/>
+    </radialGradient>
+    <filter id="rb_glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#FF0000" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="50" cy="95" rx="22" ry="4" fill="#CC0000" opacity="0.25"/>
+
+  <ellipse cx="50" cy="88" rx="22" ry="5.5" fill="url(#rb_body)"/>
+  <ellipse cx="50" cy="86" rx="22" ry="5.5" fill="url(#rb_body)"/>
+  <rect x="28" y="82" width="44" height="4" rx="1" fill="url(#rb_body)"/>
+  <ellipse cx="50" cy="82" rx="22" ry="4" fill="#3D0808"/>
+  <ellipse cx="50" cy="82" rx="20" ry="3.2" fill="url(#rb_body)"/>
+
+  <path d="M31 82 Q30 70 32 60 Q35 53 50 52 Q65 53 68 60 Q70 70 69 82 Z" fill="url(#rb_body)"/>
+  <path d="M31 82 Q30 70 32 60 Q35 53 50 52 Q65 53 68 60 Q70 70 69 82 Z" fill="url(#rb_shine)" opacity="0.5"/>
+
+  <ellipse cx="50" cy="64" rx="16" ry="2.5" fill="#8B0000" opacity="0.9"/>
+  <ellipse cx="50" cy="64" rx="14" ry="1.8" fill="#CC0000" opacity="0.5"/>
+
+  <rect x="34" y="32" width="32" height="22" rx="3" fill="url(#rb_body)"/>
+  <rect x="34" y="32" width="32" height="22" rx="3" fill="url(#rb_shine)" opacity="0.4"/>
+
+  <ellipse cx="50" cy="54" rx="16" ry="3" fill="#8B0000"/>
+  <ellipse cx="50" cy="53" rx="15" ry="2" fill="#CC0000" opacity="0.5"/>
+
+  <!-- Top battlement platform -->
+  <rect x="30" y="22" width="40" height="10" rx="2" fill="url(#rb_top)"/>
+  <rect x="30" y="22" width="40" height="10" rx="2" fill="url(#rb_shine)" opacity="0.5"/>
+
+  <!-- Battlements with red glow -->
+  <rect x="30" y="15" width="9" height="9" rx="1.5" fill="url(#rb_body)" filter="url(#rb_glow)"/>
+  <rect x="42" y="15" width="9" height="9" rx="1.5" fill="url(#rb_body)" filter="url(#rb_glow)"/>
+  <rect x="54" y="15" width="9" height="9" rx="1.5" fill="url(#rb_body)" filter="url(#rb_glow)"/>
+
+  <!-- Red windows in castle -->
+  <rect x="39" y="16" width="3" height="7" rx="1" fill="#FF0000" opacity="0.6"/>
+  <rect x="51" y="16" width="3" height="7" rx="1" fill="#FF0000" opacity="0.6"/>
+
+  <!-- Red trim line -->
+  <rect x="30" y="21" width="40" height="2" rx="1" fill="#CC0000" opacity="0.7"/>
+
+  <ellipse cx="43" cy="67" rx="3" ry="6" fill="#FF4444" opacity="0.15" transform="rotate(-15,43,67)"/>
+  <ellipse cx="40" cy="42" rx="2.5" ry="7" fill="#FF4444" opacity="0.2" transform="rotate(-10,40,42)"/>
+</svg>

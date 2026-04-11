@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <defs>
+    <!-- Stone white marble gradients -->
+    <radialGradient id="kwS_body" cx="38%" cy="30%" r="72%">
+      <stop offset="0%"  stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E8E8E8"/>
+      <stop offset="70%" stop-color="#B0B8C4"/>
+      <stop offset="100%" stop-color="#6A7280"/>
+    </radialGradient>
+    <radialGradient id="kwS_face" cx="38%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#F5F0E8"/>
+      <stop offset="50%" stop-color="#C8C0B0"/>
+      <stop offset="100%" stop-color="#7A7468"/>
+    </radialGradient>
+    <radialGradient id="kwS_gold" cx="30%" cy="25%" r="65%">
+      <stop offset="0%"  stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="kwS_shadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#455A64" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#455A64" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#263238" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="kwS_robe" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"  stop-color="#ECEFF1"/>
+      <stop offset="40%" stop-color="#CFD8DC"/>
+      <stop offset="100%" stop-color="#78909C"/>
+    </linearGradient>
+    <filter id="kwS_depth">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#263238" flood-opacity="0.4"/>
+    </filter>
+    <filter id="kwS_glow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ══ SHADOW ══ -->
+  <ellipse cx="50" cy="117" rx="26" ry="5" fill="#263238" opacity="0.3"/>
+
+  <!-- ══ BASE PLATFORM (ornate stone slab) ══ -->
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#kwS_body)" filter="url(#kwS_depth)"/>
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#kwS_shadow)"/>
+  <rect x="20" y="110" width="60" height="5" rx="2" fill="url(#kwS_robe)" opacity="0.6"/>
+  <!-- Base engrave lines -->
+  <line x1="22" y1="113" x2="78" y2="113" stroke="#90A4AE" stroke-width="0.5" opacity="0.6"/>
+  <line x1="25" y1="111" x2="75" y2="111" stroke="#ECEFF1" stroke-width="0.4" opacity="0.5"/>
+
+  <!-- ══ THRONE BASE / FOOT ══ -->
+  <rect x="24" y="99" width="52" height="10" rx="2" fill="url(#kwS_body)" filter="url(#kwS_depth)"/>
+  <rect x="24" y="99" width="52" height="10" rx="2" fill="url(#kwS_shadow)"/>
+  <line x1="26" y1="104" x2="74" y2="104" stroke="#90A4AE" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ══ ROBE / BODY OF KING ══ -->
+  <!-- Main robe shape - seated/standing figure -->
+  <path d="M30,99 Q26,85 28,70 Q30,58 34,50 Q38,43 50,41 Q62,43 66,50 Q70,58 72,70 Q74,85 70,99 Z"
+        fill="url(#kwS_robe)" filter="url(#kwS_depth)"/>
+  <path d="M30,99 Q26,85 28,70 Q30,58 34,50 Q38,43 50,41 Q62,43 66,50 Q70,58 72,70 Q74,85 70,99 Z"
+        fill="url(#kwS_shadow)"/>
+  <!-- Robe center crease lines -->
+  <path d="M50,42 Q49,60 48,80 Q47,90 47,99" stroke="#90A4AE" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <path d="M50,42 Q51,60 52,80 Q53,90 53,99" stroke="#90A4AE" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <!-- Robe folds left side -->
+  <path d="M30,99 Q31,85 33,72 Q35,62 38,55" stroke="#B0BEC5" stroke-width="0.7" fill="none" opacity="0.6"/>
+  <path d="M32,99 Q34,87 36,75 Q38,65 40,58" stroke="#B0BEC5" stroke-width="0.5" fill="none" opacity="0.4"/>
+  <!-- Robe folds right side -->
+  <path d="M70,99 Q69,85 67,72 Q65,62 62,55" stroke="#78909C" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M68,99 Q66,87 64,75 Q62,65 60,58" stroke="#78909C" stroke-width="0.5" fill="none" opacity="0.4"/>
+
+  <!-- ══ GOLD BELT/SASH ══ -->
+  <path d="M34,72 Q50,68 66,72 Q68,75 66,78 Q50,74 34,78 Q32,75 34,72 Z" fill="url(#kwS_gold)"/>
+  <path d="M38,74 L62,74" stroke="#FFF9C4" stroke-width="0.5" opacity="0.7"/>
+  <!-- Belt buckle -->
+  <rect x="46" y="72" width="8" height="6" rx="1.5" fill="url(#kwS_gold)" stroke="#FFD54F" stroke-width="0.5"/>
+  <rect x="48" y="73.5" width="4" height="3" rx="0.8" fill="#FFF9C4" opacity="0.8"/>
+
+  <!-- ══ LEFT ARM (holding orb) ══ -->
+  <path d="M30,65 Q22,62 20,58 Q18,54 22,51 Q26,49 30,52 Q32,56 34,62 Z"
+        fill="url(#kwS_robe)" filter="url(#kwS_depth)"/>
+  <path d="M30,65 Q22,62 20,58 Q18,54 22,51 Q26,49 30,52 Q32,56 34,62 Z" fill="url(#kwS_shadow)"/>
+  <!-- Orb in left hand -->
+  <circle cx="19" cy="55" r="5" fill="url(#kwS_body)" filter="url(#kwS_depth)"/>
+  <circle cx="19" cy="55" r="5" fill="url(#kwS_shadow)"/>
+  <circle cx="17" cy="53" r="2" fill="#FFFFFF" opacity="0.5"/>
+  <!-- Gold band on orb -->
+  <ellipse cx="19" cy="55" rx="5" ry="1.5" fill="url(#kwS_gold)" opacity="0.7"/>
+
+  <!-- ══ RIGHT ARM (holding scepter) ══ -->
+  <path d="M70,65 Q78,62 80,58 Q82,54 78,51 Q74,49 70,52 Q68,56 66,62 Z"
+        fill="url(#kwS_robe)" filter="url(#kwS_depth)"/>
+  <path d="M70,65 Q78,62 80,58 Q82,54 78,51 Q74,49 70,52 Q68,56 66,62 Z" fill="url(#kwS_shadow)"/>
+  <!-- Scepter staff -->
+  <rect x="79" y="32" width="3" height="26" rx="1.5" fill="url(#kwS_body)" filter="url(#kwS_depth)"/>
+  <!-- Scepter top gem cross -->
+  <rect x="76" y="30" width="9" height="4" rx="2" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <rect x="79.5" y="26" width="3" height="10" rx="1.5" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <circle cx="81" cy="28" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- ══ CAPE BEHIND ══ -->
+  <path d="M34,50 Q28,55 26,65 Q24,75 26,90 Q28,95 32,97 Q36,95 36,85 Q35,70 38,58 Z"
+        fill="#B0BEC5" opacity="0.6"/>
+  <path d="M66,50 Q72,55 74,65 Q76,75 74,90 Q72,95 68,97 Q64,95 64,85 Q65,70 62,58 Z"
+        fill="#78909C" opacity="0.5"/>
+
+  <!-- ══ ARMOR CHEST PLATE ══ -->
+  <path d="M36,50 Q38,44 50,42 Q62,44 64,50 Q62,58 50,60 Q38,58 36,50 Z"
+        fill="url(#kwS_body)" filter="url(#kwS_depth)"/>
+  <path d="M36,50 Q38,44 50,42 Q62,44 64,50 Q62,58 50,60 Q38,58 36,50 Z" fill="url(#kwS_shadow)"/>
+  <!-- Chest armor details -->
+  <path d="M40,46 Q50,44 60,46 Q60,52 50,54 Q40,52 40,46 Z" fill="#CFD8DC" opacity="0.6"/>
+  <path d="M44,47 Q50,45.5 56,47 Q56,51 50,52.5 Q44,51 44,47 Z" stroke="#90A4AE" stroke-width="0.5" fill="none"/>
+  <!-- Gold chest medallion -->
+  <circle cx="50" cy="49" r="4" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <circle cx="50" cy="49" r="2.2" fill="#FFF9C4" opacity="0.9"/>
+  <!-- cross on medallion -->
+  <line x1="50" y1="46.5" x2="50" y2="51.5" stroke="#8B6914" stroke-width="0.8"/>
+  <line x1="47.5" y1="49" x2="52.5" y2="49" stroke="#8B6914" stroke-width="0.8"/>
+
+  <!-- ══ NECK ══ -->
+  <rect x="44" y="36" width="12" height="8" rx="3" fill="url(#kwS_face)" filter="url(#kwS_depth)"/>
+  <!-- Collar armor piece -->
+  <path d="M40,38 Q50,35 60,38 Q60,41 50,43 Q40,41 40,38 Z" fill="url(#kwS_body)" opacity="0.8"/>
+
+  <!-- ══ HEAD / FACE ══ -->
+  <ellipse cx="50" cy="28" rx="13" ry="14" fill="url(#kwS_face)" filter="url(#kwS_depth)"/>
+  <ellipse cx="50" cy="28" rx="13" ry="14" fill="url(#kwS_shadow)"/>
+  <!-- Face shading area -->
+  <ellipse cx="50" cy="29" rx="9" ry="10" fill="#E8E0D0" opacity="0.6"/>
+  <!-- Beard/face details -->
+  <path d="M42,32 Q44,36 50,37 Q56,36 58,32" stroke="#B0A898" stroke-width="0.8" fill="#D4C8B8" opacity="0.6"/>
+  <path d="M44,28 Q45,30 46,31" stroke="#A09080" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M56,28 Q55,30 54,31" stroke="#A09080" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <!-- Eyes -->
+  <ellipse cx="45" cy="26" rx="2.5" ry="2" fill="#5D4037"/>
+  <ellipse cx="55" cy="26" rx="2.5" ry="2" fill="#5D4037"/>
+  <circle cx="45" cy="26" r="1.2" fill="#1A1A2E"/>
+  <circle cx="55" cy="26" r="1.2" fill="#1A1A2E"/>
+  <circle cx="44.5" cy="25.5" r="0.6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="54.5" cy="25.5" r="0.6" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M49,29 Q50,31 51,29" stroke="#A09080" stroke-width="0.8" fill="none"/>
+  <!-- Mustache -->
+  <path d="M45,33 Q47,31.5 50,32 Q53,31.5 55,33" stroke="#8D7B6A" stroke-width="1" fill="none"/>
+  <!-- Beard -->
+  <path d="M42,34 Q44,38 50,40 Q56,38 58,34" fill="#C8B8A0" opacity="0.5"/>
+  <path d="M44,36 Q46,40 50,41 Q54,40 56,36" stroke="#A09080" stroke-width="0.5" fill="none" opacity="0.6"/>
+
+  <!-- ══ CROWN ══ -->
+  <!-- Crown base band -->
+  <rect x="36" y="13" width="28" height="6" rx="2" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <rect x="37" y="14" width="26" height="4" rx="1.5" fill="#FFF9C4" opacity="0.4"/>
+  <!-- Crown points (5 spires) -->
+  <polygon points="38,13 40,5 42,13" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <polygon points="44,13 46,7 48,13" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <polygon points="49,13 51,4 53,13" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <polygon points="52,13 54,7 56,13" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <polygon points="58,13 60,5 62,13" fill="url(#kwS_gold)" filter="url(#kwS_glow)"/>
+  <!-- Crown gem dots on spires -->
+  <circle cx="40" cy="6"  r="1.8" fill="#E91E63" opacity="0.9" filter="url(#kwS_glow)"/>
+  <circle cx="46" cy="8"  r="1.5" fill="#00BCD4" opacity="0.9" filter="url(#kwS_glow)"/>
+  <circle cx="51" cy="5"  r="2"   fill="#FFFFFF" opacity="0.95" filter="url(#kwS_glow)"/>
+  <circle cx="54" cy="8"  r="1.5" fill="#00BCD4" opacity="0.9" filter="url(#kwS_glow)"/>
+  <circle cx="60" cy="6"  r="1.8" fill="#E91E63" opacity="0.9" filter="url(#kwS_glow)"/>
+  <!-- Crown gem row in band -->
+  <circle cx="42" cy="16" r="1.2" fill="#00E5FF" opacity="0.8"/>
+  <circle cx="50" cy="16" r="1.5" fill="#FFD54F" opacity="0.9"/>
+  <circle cx="58" cy="16" r="1.2" fill="#00E5FF" opacity="0.8"/>
+</svg>

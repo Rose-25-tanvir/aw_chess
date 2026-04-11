@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="pw_body" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFEF0"/>
+      <stop offset="40%" stop-color="#F5E6B0"/>
+      <stop offset="80%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <radialGradient id="pw_head" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F5E6B0"/>
+      <stop offset="80%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#9B7120"/>
+    </radialGradient>
+    <linearGradient id="pw_shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="pw_glow">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="50" cy="95" rx="19" ry="4" fill="#B8860B" opacity="0.35"/>
+
+  <!-- Base platform -->
+  <ellipse cx="50" cy="88" rx="19" ry="5" fill="url(#pw_body)"/>
+  <ellipse cx="50" cy="86" rx="19" ry="5" fill="url(#pw_body)"/>
+  <rect x="31" y="83" width="38" height="3" rx="1" fill="url(#pw_body)"/>
+  <ellipse cx="50" cy="83" rx="19" ry="3.5" fill="#F5E6B0"/>
+  <ellipse cx="50" cy="83" rx="17" ry="2.8" fill="url(#pw_body)"/>
+
+  <!-- Body - goblet / hourglass shape -->
+  <!-- Lower wide part -->
+  <path d="M34 83 Q33 76 36 70 Q40 64 50 63 Q60 64 64 70 Q67 76 66 83 Z" fill="url(#pw_body)"/>
+  <path d="M34 83 Q33 76 36 70 Q40 64 50 63 Q60 64 64 70 Q67 76 66 83 Z" fill="url(#pw_shine)" opacity="0.4"/>
+
+  <!-- Waist / stem -->
+  <path d="M40 63 Q38 58 40 53 Q43 48 50 47 Q57 48 60 53 Q62 58 60 63 Z" fill="url(#pw_body)"/>
+  <path d="M40 63 Q38 58 40 53 Q43 48 50 47 Q57 48 60 53 Q62 58 60 53 Z" fill="url(#pw_shine)" opacity="0.35"/>
+
+  <!-- Decorative gold band at waist -->
+  <ellipse cx="50" cy="63" rx="11" ry="2.2" fill="#D4A843" opacity="0.9"/>
+  <ellipse cx="50" cy="63" rx="9.5" ry="1.5" fill="#FFD700" opacity="0.5"/>
+
+  <!-- Collar ring under head -->
+  <ellipse cx="50" cy="47" rx="10" ry="2.5" fill="#D4A843" opacity="0.85"/>
+  <ellipse cx="50" cy="46.5" rx="8.5" ry="1.8" fill="#FFD700" opacity="0.5"/>
+
+  <!-- Head sphere - main orb -->
+  <circle cx="50" cy="36" r="13" fill="url(#pw_head)"/>
+  <circle cx="50" cy="36" r="13" fill="url(#pw_shine)" opacity="0.45"/>
+
+  <!-- Crown gem on top of pawn -->
+  <circle cx="50" cy="24" r="4" fill="#FFD700" filter="url(#pw_glow)"/>
+  <circle cx="50" cy="24" r="2.2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Highlight spot on head -->
+  <ellipse cx="44" cy="31" rx="3.5" ry="4.5" fill="#FFFFFF" opacity="0.3" transform="rotate(-20,44,31)"/>
+
+  <!-- Body lower highlight -->
+  <ellipse cx="42" cy="75" rx="2" ry="4" fill="#FFFFFF" opacity="0.2" transform="rotate(-15,42,75)"/>
+</svg>

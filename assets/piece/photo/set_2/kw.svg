@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- White King Base Gradient: Ivory-Gold -->
+    <radialGradient id="kw_body" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFEF0"/>
+      <stop offset="40%" stop-color="#F5E6B0"/>
+      <stop offset="80%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <radialGradient id="kw_base" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFF8DC"/>
+      <stop offset="50%" stop-color="#DAA520"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="kw_cross" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <filter id="kw_glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="kw_shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="50" cy="95" rx="22" ry="4" fill="#B8860B" opacity="0.35"/>
+
+  <!-- Base platform -->
+  <ellipse cx="50" cy="88" rx="22" ry="5.5" fill="url(#kw_base)"/>
+  <ellipse cx="50" cy="86" rx="22" ry="5.5" fill="url(#kw_base)"/>
+  <rect x="28" y="82" width="44" height="4" rx="1" fill="url(#kw_base)"/>
+  <ellipse cx="50" cy="82" rx="22" ry="4" fill="#F5E6B0"/>
+  <ellipse cx="50" cy="82" rx="20" ry="3.2" fill="url(#kw_body)"/>
+
+  <!-- Lower body skirt -->
+  <path d="M30 82 Q28 70 32 62 Q36 55 50 53 Q64 55 68 62 Q72 70 70 82 Z" fill="url(#kw_body)"/>
+  <path d="M30 82 Q28 70 32 62 Q36 55 50 53 Q64 55 68 62 Q72 70 70 82 Z" fill="url(#kw_shine)" opacity="0.4"/>
+
+  <!-- Body middle band decorative ring -->
+  <ellipse cx="50" cy="64" rx="15" ry="2.5" fill="#D4A843" opacity="0.7"/>
+  <ellipse cx="50" cy="64" rx="14" ry="2" fill="#FFD700" opacity="0.4"/>
+
+  <!-- Torso -->
+  <path d="M36 64 Q34 56 36 50 Q40 44 50 43 Q60 44 64 50 Q66 56 64 64 Z" fill="url(#kw_body)"/>
+  <path d="M36 64 Q34 56 36 50 Q40 44 50 43 Q60 44 64 50 Q66 56 64 64 Z" fill="url(#kw_shine)" opacity="0.3"/>
+
+  <!-- Neck ring -->
+  <ellipse cx="50" cy="43" rx="11" ry="3" fill="#E8C848"/>
+  <ellipse cx="50" cy="42" rx="9" ry="2" fill="#FFD700"/>
+
+  <!-- Head -->
+  <ellipse cx="50" cy="37" rx="10" ry="9" fill="url(#kw_body)"/>
+  <ellipse cx="50" cy="37" rx="10" ry="9" fill="url(#kw_shine)" opacity="0.4"/>
+
+  <!-- Crown ring around head top -->
+  <ellipse cx="50" cy="30" rx="9" ry="2.5" fill="#D4A843"/>
+  <ellipse cx="50" cy="29.5" rx="8" ry="2" fill="#FFD700" opacity="0.6"/>
+
+  <!-- Crown Cross vertical -->
+  <rect x="47.5" y="18" width="5" height="16" rx="2.5" fill="url(#kw_cross)" filter="url(#kw_glow)"/>
+  <!-- Crown Cross horizontal -->
+  <rect x="40" y="21.5" width="20" height="5" rx="2.5" fill="url(#kw_cross)" filter="url(#kw_glow)"/>
+  <!-- Cross gems -->
+  <circle cx="50" cy="19.5" r="2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="40.5" cy="24" r="1.5" fill="#FFD700" opacity="0.9"/>
+  <circle cx="59.5" cy="24" r="1.5" fill="#FFD700" opacity="0.9"/>
+
+  <!-- Highlight gem on body -->
+  <ellipse cx="44" cy="58" rx="3" ry="5" fill="#FFFFFF" opacity="0.25" transform="rotate(-15,44,58)"/>
+  <ellipse cx="43" cy="36" rx="2" ry="4" fill="#FFFFFF" opacity="0.3" transform="rotate(-10,43,36)"/>
+</svg>

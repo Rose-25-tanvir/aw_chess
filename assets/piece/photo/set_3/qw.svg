@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <defs>
+    <radialGradient id="qwS_body" cx="38%" cy="30%" r="72%">
+      <stop offset="0%"  stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E8E8E8"/>
+      <stop offset="70%" stop-color="#B0B8C4"/>
+      <stop offset="100%" stop-color="#6A7280"/>
+    </radialGradient>
+    <radialGradient id="qwS_face" cx="38%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#F5F0E8"/>
+      <stop offset="50%" stop-color="#C8C0B0"/>
+      <stop offset="100%" stop-color="#7A7468"/>
+    </radialGradient>
+    <radialGradient id="qwS_gold" cx="30%" cy="25%" r="65%">
+      <stop offset="0%"  stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="qwS_shadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#455A64" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#455A64" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#263238" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="qwS_dress" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"  stop-color="#ECEFF1"/>
+      <stop offset="35%" stop-color="#CFD8DC"/>
+      <stop offset="100%" stop-color="#78909C"/>
+    </linearGradient>
+    <filter id="qwS_depth"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#263238" flood-opacity="0.4"/></filter>
+    <filter id="qwS_glow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="50" cy="117" rx="26" ry="5" fill="#263238" opacity="0.28"/>
+
+  <!-- BASE -->
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#qwS_body)" filter="url(#qwS_depth)"/>
+  <rect x="18" y="108" width="64" height="9" rx="3" fill="url(#qwS_shadow)"/>
+  <line x1="22" y1="113" x2="78" y2="113" stroke="#90A4AE" stroke-width="0.5" opacity="0.6"/>
+  <rect x="24" y="99" width="52" height="10" rx="2" fill="url(#qwS_body)" filter="url(#qwS_depth)"/>
+
+  <!-- Wide dress silhouette -->
+  <path d="M22,99 Q18,85 22,70 Q26,55 34,48 Q38,44 50,42 Q62,44 66,48 Q74,55 78,70 Q82,85 78,99 Z"
+        fill="url(#qwS_dress)" filter="url(#qwS_depth)"/>
+  <path d="M22,99 Q18,85 22,70 Q26,55 34,48 Q38,44 50,42 Q62,44 66,48 Q74,55 78,70 Q82,85 78,99 Z"
+        fill="url(#qwS_shadow)"/>
+  <!-- Dress fold details -->
+  <path d="M50,43 Q48,65 46,85 Q45,93 44,99" stroke="#B0BEC5" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M50,43 Q52,65 54,85 Q55,93 56,99" stroke="#B0BEC5" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M22,99 Q26,84 30,70 Q34,57 38,50" stroke="#CFD8DC" stroke-width="0.8" fill="none" opacity="0.6"/>
+  <path d="M78,99 Q74,84 70,70 Q66,57 62,50" stroke="#90A4AE" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M30,99 Q33,84 36,72 Q38,62 40,55" stroke="#B0BEC5" stroke-width="0.5" fill="none" opacity="0.4"/>
+  <path d="M70,99 Q67,84 64,72 Q62,62 60,55" stroke="#90A4AE" stroke-width="0.5" fill="none" opacity="0.4"/>
+  <!-- Bottom trim of dress -->
+  <path d="M22,99 Q27,96 50,95 Q73,96 78,99" stroke="#90A4AE" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Gold waist sash -->
+  <path d="M36,68 Q50,64 64,68 L64,74 Q50,70 36,74 Z" fill="url(#qwS_gold)"/>
+  <line x1="38" y1="71" x2="62" y2="71" stroke="#FFF9C4" stroke-width="0.5" opacity="0.6"/>
+  <!-- Brooch -->
+  <circle cx="50" cy="71" r="3.5" fill="url(#qwS_gold)" stroke="#FFD54F" stroke-width="0.5"/>
+  <circle cx="50" cy="71" r="1.8" fill="#E91E63" opacity="0.9" filter="url(#qwS_glow)"/>
+
+  <!-- LEFT ARM - extended elegantly -->
+  <path d="M34,60 Q26,56 22,50 Q20,45 24,41 Q28,38 33,41 Q36,45 37,55 Z"
+        fill="url(#qwS_dress)" filter="url(#qwS_depth)"/>
+  <!-- Lily / flower in hand -->
+  <circle cx="19" cy="43" r="4" fill="#FFCDD2"/>
+  <path d="M17,43 Q19,39 21,43 Q19,47 17,43" fill="#F48FB1"/>
+  <path d="M15,43 Q19,40 23,43" fill="none" stroke="#F06292" stroke-width="0.8"/>
+  <circle cx="19" cy="43" r="1.5" fill="#FFD54F"/>
+
+  <!-- RIGHT ARM - holding scepter -->
+  <path d="M66,60 Q74,56 78,50 Q80,45 76,41 Q72,38 67,41 Q64,45 63,55 Z"
+        fill="url(#qwS_dress)" filter="url(#qwS_depth)"/>
+  <!-- Elegant scepter -->
+  <rect x="80" y="24" width="2.5" height="24" rx="1.2" fill="url(#qwS_body)"/>
+  <!-- Scepter top star -->
+  <polygon points="81.25,22 82.5,25 86,25 83.3,27.2 84.3,31 81.25,29 78.2,31 79.2,27.2 76.5,25 80,25" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+
+  <!-- TORSO / UPPER BODICE -->
+  <path d="M37,48 Q38,42 50,40 Q62,42 63,48 Q62,57 50,59 Q38,57 37,48 Z"
+        fill="url(#qwS_body)" filter="url(#qwS_depth)"/>
+  <path d="M37,48 Q38,42 50,40 Q62,42 63,48 Q62,57 50,59 Q38,57 37,48 Z" fill="url(#qwS_shadow)"/>
+  <!-- Bodice detail - pearl necklace shape -->
+  <path d="M41,47 Q50,44 59,47" stroke="#FFFFFF" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <!-- Pearl beads on necklace -->
+  <circle cx="41" cy="47" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="44" cy="45.5" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="47" cy="44.5" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="50" cy="44.2" r="1.3" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="53" cy="44.5" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="56" cy="45.5" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="59" cy="47" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Bodice star gem center -->
+  <circle cx="50" cy="50" r="3.5" fill="url(#qwS_gold)"/>
+  <circle cx="50" cy="50" r="2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- NECK -->
+  <rect x="45" y="35" width="10" height="8" rx="3" fill="url(#qwS_face)" filter="url(#qwS_depth)"/>
+
+  <!-- HEAD -->
+  <ellipse cx="50" cy="26" rx="12" ry="13" fill="url(#qwS_face)" filter="url(#qwS_depth)"/>
+  <ellipse cx="50" cy="26" rx="12" ry="13" fill="url(#qwS_shadow)"/>
+  <!-- Gentle feminine face -->
+  <ellipse cx="50" cy="27" rx="8.5" ry="9.5" fill="#F0EAE0" opacity="0.55"/>
+  <!-- Long flowing hair sides -->
+  <path d="M38,22 Q35,28 36,36 Q38,40 40,42" fill="#E8DED0" stroke="#C8BAA8" stroke-width="0.5"/>
+  <path d="M62,22 Q65,28 64,36 Q62,40 60,42" fill="#D4C8B8" stroke="#C0B4A4" stroke-width="0.5"/>
+  <!-- Eyes - almond shaped elegant -->
+  <path d="M43,24 Q45,22 47,24 Q45,26 43,24" fill="#4A3728"/>
+  <path d="M53,24 Q55,22 57,24 Q55,26 53,24" fill="#4A3728"/>
+  <circle cx="45" cy="24" r="1.3" fill="#1A1118"/>
+  <circle cx="55" cy="24" r="1.3" fill="#1A1118"/>
+  <circle cx="44.5" cy="23.5" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="54.5" cy="23.5" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Small nose -->
+  <path d="M49,28 Q50,30 51,28" stroke="#A09080" stroke-width="0.7" fill="none"/>
+  <!-- Gentle smile -->
+  <path d="M46,32 Q50,34.5 54,32" stroke="#C09888" stroke-width="0.9" fill="none"/>
+  <!-- Blush marks -->
+  <ellipse cx="44" cy="29" rx="3" ry="1.5" fill="#FFCDD2" opacity="0.4"/>
+  <ellipse cx="56" cy="29" rx="3" ry="1.5" fill="#FFCDD2" opacity="0.4"/>
+
+  <!-- TALL ORNATE CROWN -->
+  <!-- Crown base band -->
+  <rect x="37" y="11" width="26" height="5" rx="2" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <!-- Crown points - 5 tall elegant spires -->
+  <path d="M38,11 Q39,5 40,11" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <path d="M43,11 Q44.5,4 46,11" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <path d="M48,11 Q50,2 52,11" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <path d="M54,11 Q55.5,4 57,11" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <path d="M60,11 Q61,5 62,11" fill="url(#qwS_gold)" filter="url(#qwS_glow)"/>
+  <!-- Crown tip gems -->
+  <circle cx="39" cy="5.5" r="1.8" fill="#E91E63" filter="url(#qwS_glow)"/>
+  <circle cx="44.5" cy="4.5" r="1.8" fill="#AB47BC" filter="url(#qwS_glow)"/>
+  <circle cx="50" cy="2.5" r="2.2" fill="#FFFFFF" filter="url(#qwS_glow)"/>
+  <circle cx="55.5" cy="4.5" r="1.8" fill="#AB47BC" filter="url(#qwS_glow)"/>
+  <circle cx="61" cy="5.5" r="1.8" fill="#E91E63" filter="url(#qwS_glow)"/>
+  <!-- Crown band gems -->
+  <circle cx="42" cy="13.5" r="1.3" fill="#F8BBD0"/>
+  <circle cx="50" cy="13.5" r="1.5" fill="#FFD54F"/>
+  <circle cx="58" cy="13.5" r="1.3" fill="#F8BBD0"/>
+  <!-- Tiny diamonds in between spires -->
+  <circle cx="41.5" cy="9" r="0.8" fill="#E1F5FE" opacity="0.9"/>
+  <circle cx="47" cy="8" r="0.8" fill="#E1F5FE" opacity="0.9"/>
+  <circle cx="53" cy="8" r="0.8" fill="#E1F5FE" opacity="0.9"/>
+  <circle cx="58.5" cy="9" r="0.8" fill="#E1F5FE" opacity="0.9"/>
+</svg>

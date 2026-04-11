@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="qw_body" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFEF0"/>
+      <stop offset="35%" stop-color="#F5E6B0"/>
+      <stop offset="75%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="qw_shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="qw_orb" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </radialGradient>
+    <filter id="qw_glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="50" cy="95" rx="22" ry="4" fill="#B8860B" opacity="0.35"/>
+
+  <!-- Base -->
+  <ellipse cx="50" cy="88" rx="22" ry="5.5" fill="url(#qw_body)"/>
+  <ellipse cx="50" cy="86" rx="22" ry="5.5" fill="url(#qw_body)"/>
+  <rect x="28" y="82" width="44" height="4" rx="1" fill="url(#qw_body)"/>
+  <ellipse cx="50" cy="82" rx="22" ry="4" fill="#F5E6B0"/>
+  <ellipse cx="50" cy="82" rx="20" ry="3.2" fill="url(#qw_body)"/>
+
+  <!-- Skirt -->
+  <path d="M30 82 Q27 70 31 62 Q36 54 50 52 Q64 54 69 62 Q73 70 70 82 Z" fill="url(#qw_body)"/>
+  <path d="M30 82 Q27 70 31 62 Q36 54 50 52 Q64 54 69 62 Q73 70 70 82 Z" fill="url(#qw_shine)" opacity="0.4"/>
+
+  <!-- Band ring -->
+  <ellipse cx="50" cy="63" rx="16" ry="2.5" fill="#D4A843" opacity="0.8"/>
+  <ellipse cx="50" cy="63" rx="14" ry="1.8" fill="#FFD700" opacity="0.4"/>
+
+  <!-- Torso -->
+  <path d="M35 63 Q33 55 35 49 Q39 43 50 42 Q61 43 65 49 Q67 55 65 63 Z" fill="url(#qw_body)"/>
+  <path d="M35 63 Q33 55 35 49 Q39 43 50 42 Q61 43 65 49 Q67 55 65 63 Z" fill="url(#qw_shine)" opacity="0.3"/>
+
+  <!-- Neck -->
+  <ellipse cx="50" cy="42" rx="10" ry="2.5" fill="#E8C848"/>
+  <ellipse cx="50" cy="41.5" rx="8.5" ry="2" fill="#FFD700" opacity="0.5"/>
+
+  <!-- Head sphere -->
+  <circle cx="50" cy="35" r="10" fill="url(#qw_body)"/>
+  <circle cx="50" cy="35" r="10" fill="url(#qw_shine)" opacity="0.4"/>
+
+  <!-- Crown with 5 orbs - Queen style -->
+  <rect x="40" y="27" width="20" height="4" rx="2" fill="#D4A843"/>
+  <!-- Orb tips of crown -->
+  <circle cx="40" cy="25" r="3" fill="url(#qw_orb)" filter="url(#qw_glow)"/>
+  <circle cx="46" cy="22.5" r="2.5" fill="url(#qw_orb)" filter="url(#qw_glow)"/>
+  <circle cx="50" cy="21" r="3" fill="url(#qw_orb)" filter="url(#qw_glow)"/>
+  <circle cx="54" cy="22.5" r="2.5" fill="url(#qw_orb)" filter="url(#qw_glow)"/>
+  <circle cx="60" cy="25" r="3" fill="url(#qw_orb)" filter="url(#qw_glow)"/>
+
+  <!-- Center jewel -->
+  <circle cx="50" cy="21" r="1.5" fill="#FFFFFF" opacity="0.95"/>
+
+  <!-- Body highlight -->
+  <ellipse cx="44" cy="57" rx="3" ry="5" fill="#FFFFFF" opacity="0.25" transform="rotate(-15,44,57)"/>
+</svg>

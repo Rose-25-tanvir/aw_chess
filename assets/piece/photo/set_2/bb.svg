@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bb_body" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#4A0A0A"/>
+      <stop offset="40%" stop-color="#2D0505"/>
+      <stop offset="80%" stop-color="#1A0202"/>
+      <stop offset="100%" stop-color="#0D0101"/>
+    </radialGradient>
+    <linearGradient id="bb_shine" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#CC2222" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#CC2222" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bb_orb" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FF6666"/>
+      <stop offset="40%" stop-color="#CC0000"/>
+      <stop offset="100%" stop-color="#6B0000"/>
+    </radialGradient>
+    <filter id="bb_glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#FF0000" flood-opacity="0.4" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="50" cy="95" rx="20" ry="4" fill="#CC0000" opacity="0.25"/>
+
+  <!-- Base -->
+  <ellipse cx="50" cy="88" rx="20" ry="5" fill="url(#bb_body)"/>
+  <ellipse cx="50" cy="86" rx="20" ry="5" fill="url(#bb_body)"/>
+  <rect x="30" y="83" width="40" height="3" rx="1" fill="url(#bb_body)"/>
+  <ellipse cx="50" cy="83" rx="20" ry="3.5" fill="#3D0808"/>
+  <ellipse cx="50" cy="83" rx="18" ry="2.8" fill="url(#bb_body)"/>
+
+  <!-- Body column -->
+  <path d="M33 83 Q32 72 35 63 Q38 55 50 53 Q62 55 65 63 Q68 72 67 83 Z" fill="url(#bb_body)"/>
+  <path d="M33 83 Q32 72 35 63 Q38 55 50 53 Q62 55 65 63 Q68 72 67 83 Z" fill="url(#bb_shine)" opacity="0.5"/>
+
+  <!-- Mid band -->
+  <ellipse cx="50" cy="64" rx="14" ry="2.5" fill="#8B0000" opacity="0.9"/>
+
+  <!-- Neck column -->
+  <path d="M40 53 Q38 46 40 38 Q43 32 50 30 Q57 32 60 38 Q62 46 60 53 Z" fill="url(#bb_body)"/>
+  <path d="M40 53 Q38 46 40 38 Q43 32 50 30 Q57 32 60 38 Q62 46 60 53 Z" fill="url(#bb_shine)" opacity="0.4"/>
+
+  <!-- Bands -->
+  <ellipse cx="50" cy="53" rx="10" ry="2.5" fill="#8B0000" opacity="0.9"/>
+  <ellipse cx="50" cy="30" rx="9" ry="2.5" fill="#8B0000" opacity="0.9"/>
+
+  <!-- Bishop mitre head -->
+  <path d="M50 10 L40 28 Q45 32 50 31 Q55 32 60 28 Z" fill="url(#bb_body)"/>
+  <path d="M50 10 L40 28 Q45 32 50 31 Q55 32 60 28 Z" fill="url(#bb_shine)" opacity="0.5"/>
+
+  <!-- Glowing top orb -->
+  <circle cx="50" cy="10" r="4" fill="url(#bb_orb)" filter="url(#bb_glow)"/>
+  <circle cx="50" cy="10" r="2" fill="#FF8888" opacity="0.9"/>
+
+  <!-- Mitre slit -->
+  <line x1="50" y1="14" x2="50" y2="29" stroke="#CC0000" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Body glow highlight -->
+  <ellipse cx="43" cy="68" rx="2.5" ry="5" fill="#FF4444" opacity="0.15" transform="rotate(-15,43,68)"/>
+</svg>

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <defs>
+    <radialGradient id="bwS_stone" cx="35%" cy="25%" r="72%">
+      <stop offset="0%"  stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E0E7EE"/>
+      <stop offset="65%" stop-color="#9EB3C0"/>
+      <stop offset="100%" stop-color="#546E7A"/>
+    </radialGradient>
+    <radialGradient id="bwS_face" cx="38%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#F5F0E8"/>
+      <stop offset="50%" stop-color="#C8C0B0"/>
+      <stop offset="100%" stop-color="#7A7468"/>
+    </radialGradient>
+    <radialGradient id="bwS_gold" cx="30%" cy="25%" r="65%">
+      <stop offset="0%"  stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="bwS_shadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#455A64" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#455A64" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#263238" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="bwS_robe" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"  stop-color="#ECEFF1"/>
+      <stop offset="40%" stop-color="#CFD8DC"/>
+      <stop offset="100%" stop-color="#78909C"/>
+    </linearGradient>
+    <filter id="bwS_depth"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#263238" flood-opacity="0.4"/></filter>
+    <filter id="bwS_glow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="50" cy="117" rx="24" ry="5" fill="#263238" opacity="0.28"/>
+
+  <!-- BASE -->
+  <rect x="20" y="108" width="60" height="9" rx="3" fill="url(#bwS_stone)" filter="url(#bwS_depth)"/>
+  <rect x="20" y="108" width="60" height="9" rx="3" fill="url(#bwS_shadow)"/>
+  <rect x="26" y="99" width="48" height="10" rx="2" fill="url(#bwS_stone)" filter="url(#bwS_depth)"/>
+
+  <!-- ROBE - tapered tall column -->
+  <path d="M28,99 Q24,83 27,68 Q30,54 36,47 Q40,42 50,40 Q60,42 64,47 Q70,54 73,68 Q76,83 72,99 Z"
+        fill="url(#bwS_robe)" filter="url(#bwS_depth)"/>
+  <path d="M28,99 Q24,83 27,68 Q30,54 36,47 Q40,42 50,40 Q60,42 64,47 Q70,54 73,68 Q76,83 72,99 Z"
+        fill="url(#bwS_shadow)"/>
+  <!-- Robe folds -->
+  <path d="M50,41 L48,70 L47,99" stroke="#90A4AE" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <path d="M50,41 L52,70 L53,99" stroke="#90A4AE" stroke-width="0.6" fill="none" opacity="0.5"/>
+  <path d="M28,99 Q30,83 33,68 Q36,56 40,49" stroke="#B0BEC5" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M72,99 Q70,83 67,68 Q64,56 60,49" stroke="#78909C" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <!-- Robe hem border -->
+  <path d="M28,99 Q36,96 50,95 Q64,96 72,99" stroke="#78909C" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- GOLD STOLE (bishop sash) -->
+  <path d="M40,68 L60,68 L58,74 L50,77 L42,74 Z" fill="url(#bwS_gold)"/>
+  <!-- Cross on stole -->
+  <line x1="50" y1="68" x2="50" y2="77" stroke="#8B6914" stroke-width="0.8" opacity="0.7"/>
+  <line x1="45" y1="71" x2="55" y2="71" stroke="#8B6914" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- LEFT ARM with closed hand -->
+  <path d="M36,56 Q28,52 25,46 Q23,40 27,37 Q32,34 36,38 Q38,43 38,52 Z"
+        fill="url(#bwS_robe)" filter="url(#bwS_depth)"/>
+  <!-- Blessed book in hand -->
+  <rect x="17" y="38" width="12" height="9" rx="1" fill="#ECEFF1" stroke="#90A4AE" stroke-width="0.6"/>
+  <line x1="23" y1="38" x2="23" y2="47" stroke="#90A4AE" stroke-width="1.5"/>
+  <line x1="19" y1="41" x2="22" y2="41" stroke="#B0BEC5" stroke-width="0.5" opacity="0.6"/>
+  <line x1="19" y1="43" x2="22" y2="43" stroke="#B0BEC5" stroke-width="0.5" opacity="0.6"/>
+  <!-- Gold cross on book cover -->
+  <line x1="26" y1="39.5" x2="26" y2="46" stroke="#FFD54F" stroke-width="0.8"/>
+  <line x1="24" y1="42.5" x2="28" y2="42.5" stroke="#FFD54F" stroke-width="0.8"/>
+
+  <!-- RIGHT ARM with crozier staff -->
+  <path d="M64,56 Q72,52 75,46 Q77,40 73,37 Q68,34 64,38 Q62,43 62,52 Z"
+        fill="url(#bwS_robe)" filter="url(#bwS_depth)"/>
+  <!-- Crozier (bishop staff with curved top) -->
+  <line x1="81" y1="38" x2="81" y2="80" stroke="url(#bwS_stone)" stroke-width="2.5"/>
+  <!-- Curved crook top -->
+  <path d="M81,38 Q81,28 87,26 Q93,24 93,30 Q93,36 87,37 Q83,37 81,38" fill="none" stroke="url(#bwS_gold)" stroke-width="2" fill-rule="evenodd"/>
+  <!-- Gold finial -->
+  <circle cx="87" cy="26" r="2.5" fill="url(#bwS_gold)" filter="url(#bwS_glow)"/>
+  <circle cx="87" cy="26" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- CHEST / PECTORAL CROSS -->
+  <path d="M36,47 Q38,41 50,39 Q62,41 64,47 Q62,56 50,58 Q38,56 36,47 Z"
+        fill="url(#bwS_stone)" filter="url(#bwS_depth)"/>
+  <path d="M36,47 Q38,41 50,39 Q62,41 64,47 Q62,56 50,58 Q38,56 36,47 Z" fill="url(#bwS_shadow)"/>
+  <!-- Large pectoral cross -->
+  <rect x="47.5" y="41" width="5" height="15" rx="2" fill="url(#bwS_gold)" filter="url(#bwS_glow)"/>
+  <rect x="42" y="46" width="16" height="5" rx="2" fill="url(#bwS_gold)" filter="url(#bwS_glow)"/>
+  <!-- Cross jewel center -->
+  <circle cx="50" cy="48.5" r="2.5" fill="#FFFFFF" opacity="0.95"/>
+  <circle cx="50" cy="48.5" r="1.3" fill="#00E5FF" opacity="0.8"/>
+  <!-- Cross arm gems -->
+  <circle cx="50" cy="42"   r="1.2" fill="#E91E63" opacity="0.9"/>
+  <circle cx="42.5" cy="48.5" r="1.2" fill="#E91E63" opacity="0.9"/>
+  <circle cx="57.5" cy="48.5" r="1.2" fill="#E91E63" opacity="0.9"/>
+
+  <!-- NECK -->
+  <rect x="45" y="34" width="10" height="8" rx="3" fill="url(#bwS_face)" filter="url(#bwS_depth)"/>
+  <!-- White collar -->
+  <path d="M41,36 Q50,33 59,36 Q58,40 50,41 Q42,40 41,36 Z" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- HEAD / FACE -->
+  <ellipse cx="50" cy="25" rx="12" ry="13" fill="url(#bwS_face)" filter="url(#bwS_depth)"/>
+  <ellipse cx="50" cy="25" rx="12" ry="13" fill="url(#bwS_shadow)"/>
+  <!-- Wise elderly face -->
+  <ellipse cx="50" cy="26" rx="8" ry="9" fill="#F0EAE0" opacity="0.5"/>
+  <!-- Wise eyes -->
+  <ellipse cx="45" cy="23" rx="2.3" ry="1.8" fill="#4A3728"/>
+  <ellipse cx="55" cy="23" rx="2.3" ry="1.8" fill="#4A3728"/>
+  <circle cx="45" cy="23" r="1.1" fill="#1A1118"/>
+  <circle cx="55" cy="23" r="1.1" fill="#1A1118"/>
+  <circle cx="44.5" cy="22.5" r="0.6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="54.5" cy="22.5" r="0.6" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Bushy eyebrows (wise) -->
+  <path d="M42,20 Q45,18.5 48,20" stroke="#A09080" stroke-width="1.2" fill="none"/>
+  <path d="M52,20 Q55,18.5 58,20" stroke="#A09080" stroke-width="1.2" fill="none"/>
+  <!-- Nose -->
+  <path d="M48.5,27 Q50,29.5 51.5,27" stroke="#A09080" stroke-width="0.8" fill="none"/>
+  <!-- White beard -->
+  <path d="M42,31 Q44,37 50,39 Q56,37 58,31" fill="#E8E0D0" opacity="0.8"/>
+  <path d="M44,33 Q46,38 50,40 Q54,38 56,33" stroke="#C8C0B0" stroke-width="0.5" fill="none"/>
+  <!-- Mustache -->
+  <path d="M45,30 Q48,28.5 50,29 Q52,28.5 55,30" stroke="#C0B8A8" stroke-width="0.9" fill="none"/>
+
+  <!-- BISHOP MITRE HAT (tall pointed) -->
+  <!-- Hat sides/brim -->
+  <path d="M37,14 Q38,10 50,4 Q62,10 63,14 L58,16 L50,13 L42,16 Z" fill="url(#bwS_stone)" filter="url(#bwS_depth)"/>
+  <path d="M37,14 Q38,10 50,4 Q62,10 63,14 L58,16 L50,13 L42,16 Z" fill="url(#bwS_shadow)"/>
+  <!-- Mitre tall point -->
+  <path d="M42,16 L50,3 L58,16" fill="url(#bwS_stone)" filter="url(#bwS_depth)"/>
+  <path d="M42,16 L50,3 L58,16" fill="url(#bwS_shadow)"/>
+  <!-- Mitre center vertical seam -->
+  <line x1="50" y1="3" x2="50" y2="16" stroke="#90A4AE" stroke-width="0.7" opacity="0.6"/>
+  <!-- Mitre gold trim band at base -->
+  <rect x="37" y="14" width="26" height="3" rx="1" fill="url(#bwS_gold)" filter="url(#bwS_glow)"/>
+  <!-- Gold cross on mitre front -->
+  <line x1="50" y1="6" x2="50" y2="13" stroke="#FFD54F" stroke-width="0.8" opacity="0.8"/>
+  <line x1="46" y1="9" x2="54" y2="9" stroke="#FFD54F" stroke-width="0.8" opacity="0.8"/>
+  <!-- Jewel on mitre -->
+  <circle cx="50" cy="9" r="1.8" fill="#00E5FF" opacity="0.9" filter="url(#bwS_glow)"/>
+  <!-- Mitre edge highlights -->
+  <line x1="42" y1="16" x2="50" y2="3" stroke="#FFFFFF" stroke-width="0.5" opacity="0.5"/>
+  <line x1="58" y1="16" x2="50" y2="3" stroke="#CFD8DC" stroke-width="0.5" opacity="0.4"/>
+  <!-- Lappets (fabric strips hanging) -->
+  <rect x="37" y="17" width="4" height="10" rx="1" fill="url(#bwS_robe)" opacity="0.7"/>
+  <rect x="59" y="17" width="4" height="10" rx="1" fill="url(#bwS_robe)" opacity="0.7"/>
+  <line x1="39" y1="18" x2="39" y2="27" stroke="#90A4AE" stroke-width="0.5" opacity="0.5"/>
+  <line x1="61" y1="18" x2="61" y2="27" stroke="#78909C" stroke-width="0.5" opacity="0.5"/>
+</svg>

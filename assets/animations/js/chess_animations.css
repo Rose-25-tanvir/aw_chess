@@ -1,0 +1,87 @@
+/* Premium Chess Animations */
+
+/* 1. Piece Smooth Move */
+.chess-piece-transition {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. Piece Spin Move */
+@keyframes piece-spin {
+    from { transform: translate(var(--start-x), var(--start-y)) rotate(0deg); }
+    to { transform: translate(var(--end-x), var(--end-y)) rotate(720deg); }
+}
+
+.piece-spinning {
+    animation: piece-spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* 3. Results Overlay */
+.game-result-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.game-result-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.result-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    opacity: 0;
+    transform: scale(0.5);
+    filter: blur(10px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.result-text.show {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* Booyah Style (Bright Gold/Yellow/Cyan) */
+.text-booyah {
+    color: #00f2ff;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.8), 
+                 0 0 40px rgba(0, 242, 255, 0.5),
+                 0 0 60px rgba(0, 242, 255, 0.3);
+    background: linear-gradient(135deg, #00f2ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Defeat Style (Bright Red/Crimson) */
+.text-defeat {
+    color: #ff004c;
+    text-shadow: 0 0 20px rgba(255, 0, 76, 0.8), 
+                 0 0 40px rgba(255, 0, 76, 0.5),
+                 0 0 60px rgba(255, 0, 76, 0.3);
+    background: linear-gradient(135deg, #ff004c, #7b001c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle background glow for Booyah */
+.overlay-booyah {
+    background: radial-gradient(circle, rgba(0, 114, 255, 0.2) 0%, black 80%);
+}
+
+.overlay-defeat {
+    background: radial-gradient(circle, rgba(123, 0, 28, 0.2) 0%, black 80%);
+}

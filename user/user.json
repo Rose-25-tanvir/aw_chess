@@ -1,1 +1,29 @@
-
+{
+  "am9094114@gmail.com": {
+    "email": "am9094114@gmail.com",
+    "name": "Tanvir",
+    "country": "Bangladesh ",
+    "gender": "male",
+    "birthDate": "09-09-2010",
+    "uid": "7815180611",
+    "created": "2026-04-11T14:00:32.319Z",
+    "silver": 500,
+    "gold": 0,
+    "photo": "https://lh3.googleusercontent.com/a/ACg8ocIHZvORLpvINbkzBaOtL3-67u37cp947617g2ovejEq0WIXVg=s96-c",
+    "inventory": {
+      "activeSet": "common",
+      "piece": [
+        "common"
+      ],
+      "animation": [
+        "0"
+      ]
+    },
+    "settings": {
+      "showMove": true,
+      "showCheck": true,
+      "followRules": true
+    },
+    "lastLogin": "2026-04-11T14:00:32.834Z"
+  }
+}

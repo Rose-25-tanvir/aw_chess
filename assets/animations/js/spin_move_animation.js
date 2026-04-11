@@ -1,51 +1,31 @@
 /**
- * Animation 2: Spinning Piece Move
- * Moves a chess piece while rotating it 360+ degrees.
+ * Animation 3: Tornado (Spin Move)
+ * Piece rotates 360 degrees while sliding
  */
 
-const ChessSpinMoveAnimation = {
-    /**
-     * Animates a piece to a new square with a spin effect.
-     * @param {HTMLElement} pieceElement - The chess piece DOM element.
-     * @param {number} startX - Current X coordinate.
-     * @param {number} startY - Current Y coordinate.
-     * @param {number} targetX - Target X coordinate.
-     * @param {number} targetY - Target Y coordinate.
-     * @param {number} duration - Duration in milliseconds (default 800).
-     */
-    animate: function(pieceElement, startX, startY, targetX, targetY, duration = 800) {
-        return new Promise((resolve) => {
-            if (!pieceElement) return resolve();
+window.triggerChessAnimation = async function(fromStr, toStr, move) {
+    const fromSq = document.querySelector(`[data-square="${fromStr}"]`);
+    const toSq = document.querySelector(`[data-square="${toStr}"]`);
+    if (!fromSq || !toSq) return;
 
-            // Set CSS variables for the animation keyframes
-            pieceElement.style.setProperty('--start-x', `${startX}px`);
-            pieceElement.style.setProperty('--start-y', `${startY}px`);
-            pieceElement.style.setProperty('--end-x', `${targetX}px`);
-            pieceElement.style.setProperty('--end-y', `${targetY}px`);
+    const pieceImg = toSq.querySelector('img');
+    if (!pieceImg) return;
 
-            // Apply the animation class defined in chess_animations.css
-            pieceElement.classList.add('piece-spinning');
-            
-            // Override duration if provided
-            pieceElement.style.animationDuration = `${duration}ms`;
+    const fromRect = fromSq.getBoundingClientRect();
+    const toRect = toSq.getBoundingClientRect();
 
-            const onEnd = () => {
-                pieceElement.removeEventListener('animationend', onEnd);
-                
-                // Finalize position and remove animation class
-                pieceElement.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
-                pieceElement.classList.remove('piece-spinning');
-                
-                resolve();
-            };
+    const deltaX = fromRect.left - toRect.left;
+    const deltaY = fromRect.top - toRect.top;
 
-            pieceElement.addEventListener('animationend', onEnd);
+    pieceImg.style.transition = 'none';
+    pieceImg.style.transform = `translate(${deltaX}px, ${deltaY}px) rotate(0deg)`;
+    
+    pieceImg.offsetHeight; // force reflow
 
-            // Safety timeout
-            setTimeout(onEnd, duration + 50);
-        });
-    }
+    pieceImg.style.transition = 'transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    pieceImg.style.transform = 'translate(0, 0) rotate(360deg)';
+
+    return new Promise(r => setTimeout(r, 600));
 };
 
-// Exporting for use in other files
-window.ChessSpinMoveAnimation = ChessSpinMoveAnimation;
+console.log("Tornado Animation Loaded: Ready for spin moves.");

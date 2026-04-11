@@ -1,14 +1,18 @@
 {
   "am9094114@gmail.com": {
-    "activeSet": "1",
-    "piece": [
-      "common",
-      "1"
-    ],
-    "animation": [
-      "0",
-      "2",
-      "3"
-    ]
+    "inventory": {
+      "activeSet": "common",
+      "piece": [
+        "common"
+      ],
+      "animation": [
+        "0",
+        "3"
+      ]
+    },
+    "selectedAnimations": {
+      "1": "0",
+      "2": "0"
+    }
   }
 }

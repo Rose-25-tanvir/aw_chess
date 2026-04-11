@@ -8,7 +8,7 @@
     "uid": "7815180611",
     "created": "2026-04-11T14:00:32.319Z",
     "silver": 5000,
-    "gold": 1000,
+    "gold": 0,
     "photo": "https://lh3.googleusercontent.com/a/ACg8ocIHZvORLpvINbkzBaOtL3-67u37cp947617g2ovejEq0WIXVg=s96-c",
     "inventory": {
       "activeSet": "1",
@@ -26,6 +26,6 @@
       "showCheck": true,
       "followRules": true
     },
-    "lastLogin": "2026-04-11T14:55:32.979Z"
+    "lastLogin": "2026-04-11T14:55:35.698Z"
   }
 }

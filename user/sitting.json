@@ -1,1 +1,7 @@
-
+{
+  "am9094114@gmail.com": {
+    "showMove": true,
+    "showCheck": true,
+    "followRules": true
+  }
+}

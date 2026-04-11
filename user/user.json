@@ -11,7 +11,7 @@
     "gold": 4000,
     "photo": "https://lh3.googleusercontent.com/a/ACg8ocIHZvORLpvINbkzBaOtL3-67u37cp947617g2ovejEq0WIXVg=s96-c",
     "inventory": {
-      "activeSet": "common",
+      "activeSet": "1",
       "piece": [
         "common",
         "1"
@@ -25,6 +25,6 @@
       "showCheck": true,
       "followRules": true
     },
-    "lastLogin": "2026-04-11T14:13:26.982Z"
+    "lastLogin": "2026-04-11T14:13:40.743Z"
   }
 }

@@ -13,7 +13,8 @@
     "inventory": {
       "activeSet": "common",
       "piece": [
-        "common"
+        "common",
+        "1"
       ],
       "animation": [
         "0"

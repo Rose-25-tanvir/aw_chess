@@ -1,0 +1,53 @@
+{
+  "assets": {
+    "groups": {
+      "1": "Move",
+      "2": "Booyah",
+      "3": "chake",
+      "4": "chakemate",
+      "5": "castling"
+    },
+
+    "lobby":{
+      "bg":"https://i.ibb.co.com/tMR4kk4M/5.jpg"
+    },
+    "animation": {
+      "0": {
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/blob/main/assets/animations/js/chess_animations.css"
+      },
+      "1": {
+        "name":"Spead",
+        "photo":"https://i.ibb.co.com/5gsp1rnG/spead.jpg",
+        "group":"1",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/blob/main/assets/animations/js/move_animation.js"
+      },
+      "2": {
+        "name":"Super booyah",
+        "photo":"https://i.ibb.co.com/tw3Yp3cG/booyah.jpg",
+        "group":"2",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/blob/main/assets/animations/js/results_overlay.js"
+      },
+      "3": {
+        "name":"Tornado",
+        "photo":"https://i.ibb.co.com/SLf6RMk/tornado.jpg",
+        "group":"1",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/blob/main/assets/animations/js/spin_move_animation.js"
+      }
+
+    },
+    "piece": {
+      "1": {
+        "name":"Set 1",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/tree/main/assets/piece/photo/set_1"
+      },
+      "2": {
+        "name":"Set 2",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/tree/main/assets/piece/photo/set_2"
+      },
+      "3": {
+        "name":"Set 3",
+        "url": "https://github.com/Rose-25-tanvir/aw_chess/tree/main/assets/piece/photo/set_3"
+      }
+    }
+  }
+}
